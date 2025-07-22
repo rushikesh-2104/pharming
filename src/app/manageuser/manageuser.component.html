@@ -1,0 +1,27 @@
+<div
+    class="table-responsive"
+>
+
+    <table
+        class="table table-primary"
+    >
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Username</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of users">
+                <td>{{u._id}}</td>
+                <td>{{u._username}}</td>
+                <td>
+                    <div class="btn btn-primary">Edit</div>
+                    <div class="btn btn-danger" (click)="deleteuser(u._id)">Delete</div>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
